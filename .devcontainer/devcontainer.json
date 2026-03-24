@@ -16,6 +16,13 @@
         "github.copilot.chat.enabled": false,
         "editor.inlineSuggest.enabled": false,
 
+        // Suppress Chat panel UI (Codespaces force-injects the extension,
+        // these settings prevent the panel from being usable / visible)
+        "chat.commandCenter.enabled": false,
+        "inlineChat.enabled": false,
+        "inlineChat.showToolbar": "never",
+        "workbench.commandPalette.experimental.suggestCommands": false,
+
         // Disable IntelliCode & similar
         "vsintellicode.features.python.deepLearning": "disabled",
         "vsintellicode.modify.editor.suggestSelection": "none",
@@ -36,5 +43,5 @@
   // Nothing to forward by default - add ports here as needed
   "forwardPorts": [],
 
-  "postCreateCommand": "python --version"
+  "postCreateCommand": "python --version && code --disable-extension GitHub.copilot --disable-extension GitHub.copilot-chat || true"
 }
