@@ -33,8 +33,8 @@ def square(number):
 
 # YOUR CODE HERE:
 
-
-
+greet_student("Montana")
+square("7")
 
 
 # ----------------------------------------------------------
